@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> belajarkeluar home </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--ini media query  otomatis rubah style kalau layar berubah dan display:flex adalah flex box//-->
+		<style>
+			#pesan{
+				display:flex;
+				flex-wrap:wrap;
+			}
+			#pesan2,#prospectstudent > input {
+				background-color:springgreen;
+				font-size:20px;
+				margin:20px;
+				padding:20px;
+				width:100%;
+			}
+			@media (min-width:600px){
+				body {
+				background-color:red;
+				}
+			}
+			@media (max-width:599px){
+				body {
+				background-color:blue;
+				}
+			} 
+		</style>
+	</head>
+	<body>
+		<h1> BELAJARKELUAR </h1>
+		<img src="C:\Users\enhpade\belajarkeluar\BK.png" width=50%>
+		<div id=profil>
+			ini adalah <span class="katamutiara">profil</span> dari konsultan belajar keluar
+		</div>
+		<div id=motto>
+			 <span class="katamutiara">motto</span> kami adalah melayani dengan hati dan buat kami setiap anak adalah unik dan mereka akan sukses bila kita menempatkanya pada sekolah dan jurusan yang tepat
+		</div>
+		<div id=pesan>
+			<div id=pesan1>Bila ingin konsultasi silahkan masukan data diri agar kami bisa menghubungi kembali </div>
+			<div id=pesan2>semua bagian dengan tanda * harus diisi agar kita bisa menghubungi dan menyiapkan konsultasi yang lebih tepat dan personal
+			</div>
+		</div>
+		<form id=prospectstudent>
+			<label for="name"> Nama lengkap*:</label>
+			<input type='text' placeholder="nama murid" name="name" required><br>
+			<label for="SMA"> Nama Sekolah*:</label>
+			<input type='text' placeholder="nama sekolah" name="SMA" required><br>
+			<label for="lulus"> tahun kelulusan sma*:</label>
+			<input type='text' placeholder="20xx" name="lulus" patern="[0-9]{4}" required><br>
+			<label for="telp"> nomor telepon*:</label>
+			<input type='text' placeholder="081xxxxxxxxxxx" name="telp" patern="[0-9]{14}" minlength='11'maxlength='14' required><br>
+			<label for="email"> alamat email*:</label>
+			<input type='text' placeholder="xxx@xxxx.com" name="email" required><br>
+			<label for="dob"> tanggal lahir*:</label>
+			<input type='date' placeholder="dd/mm/yyyy" name="dob" required><br>
+			<label for="major"> jurusan kuliah atau nama kampus atau negara yang diinginkan:</label>
+			<input type='text' placeholder="engineering/business/etc" name="major" ><br>
+			<button>simpan!</button>
+		</form>
+	</body>
+</html>
